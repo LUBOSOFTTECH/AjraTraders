@@ -10,7 +10,7 @@
 {
     font-family: 'slick';
     font-weight: normal;
-    font-style: normal;
+    font-style: monospace;
 
     src: url('../webfonts/slick.eot');
     src: url('../webfonts/slick.eot?#iefix') format('embedded-opentype'),

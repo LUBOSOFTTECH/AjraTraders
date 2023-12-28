@@ -170,7 +170,7 @@ abbr[title] {
 
 address {
     margin-bottom: 1rem;
-    font-style: normal;
+    font-style: monospace;
     line-height: inherit
 }
 
@@ -4378,7 +4378,7 @@ fieldset:disabled .btn {
     align-items: center;
     justify-content: space-between;
     padding-top: .5rem;
-    padding-bottom: .5rem
+    padding-bottom: .5rem;
 }
 
 .navbar>.container,
@@ -4428,6 +4428,7 @@ fieldset:disabled .btn {
 .navbar-collapse {
     align-items: center;
     width: 100%
+    
 }
 
 .navbar-toggler {
@@ -6157,7 +6158,7 @@ fieldset:disabled .btn {
     display: block;
     margin: 0;
     font-family: var(--bs-font-sans-serif);
-    font-style: normal;
+    font-style: monospace;
     font-weight: 400;
     line-height: 1.5;
     text-align: left;
@@ -6282,7 +6283,7 @@ fieldset:disabled .btn {
     display: block;
     max-width: 276px;
     font-family: var(--bs-font-sans-serif);
-    font-style: normal;
+    font-style: monospace;
     font-weight: 400;
     line-height: 1.5;
     text-align: left;
@@ -7911,11 +7912,11 @@ fieldset:disabled .btn {
 }
 
 .fst-italic {
-    font-style: italic !important
+    font-style: monospace !important
 }
 
 .fst-normal {
-    font-style: normal !important
+    font-style: monospace !important
 }
 
 .fw-light {
@@ -11559,6 +11560,10 @@ fieldset:disabled .btn {
     .d-print-none {
         display: none !important
     }
+    .coloredDiv {
+        color: #06357a;
+        background-color: #0a58ca;
+      }
 }
 
 /*# sourceMappingURL=bootstrap.min.css.map */

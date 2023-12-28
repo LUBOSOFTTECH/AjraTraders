@@ -35,7 +35,7 @@ body, ul, li, p, a, label, input, div {
   font-weight: 300 !important;
 }
 .h1 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Serif', 'Times New Roman';
   font-size: 30px !important;
   font-weight: 100 !important;
 }
@@ -49,7 +49,7 @@ body, ul, li, p, a, label, input, div {
   font-size: 22px !important;
 }
 /* General */
-.logo { font-weight: 400 !important;}
+.logo { font-weight: 450 !important;}
 .text-warning {  color: #ede861 !important;}
 .text-muted { color: #bcbcbc !important;}
 .text-success { color: #c69b08 !important;}
