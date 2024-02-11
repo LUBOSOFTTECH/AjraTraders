@@ -1,4 +1,5 @@
 
+let myBoolean = true;
 // preloader script............
 var audio = document.getElementById("audioPlayer");
 var loader = document.getElementById("preloader");
@@ -7,21 +8,15 @@ window.addEventListener("load", function () {
   document.querySelector('.hey').classList.add('popup');
 })
 
-// preloader script ends here.........
-
-// switch for setting
-function settingtoggle(){
-  document.getElementById("setting-container").classList.toggle('settingactivate');
-  document.getElementById("visualmodetogglebuttoncontainer").classList.toggle('visualmodeshow');
-  document.getElementById("soundtogglebuttoncontainer").classList.toggle('soundmodeshow');
-}
 function playpause() {
-  if (document.getElementById('switchforsound').checked == false) {
+  if (myBoolean == false) {
     audio.pause();
+    myBoolean=true;
    }
 
  else{
      audio.play();
+     myBoolean=false;
  }
   }
 
