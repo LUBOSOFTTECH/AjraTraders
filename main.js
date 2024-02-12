@@ -5,10 +5,11 @@ var audio = document.getElementById("audioPlayer");
 var loader = document.getElementById("preloader");
 var svgPath = document.querySelector("#setting-btn svg path");
 window.addEventListener("load", function () {
-  myBoolean = true;
+  myBoolean = false;
+  audio.play();
   loader.style.display = "none";
   document.querySelector('.hey').classList.add('popup');
-  this.playpause();
+  
 })
 
 function playpause() {
