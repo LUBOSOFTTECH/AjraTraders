@@ -3,20 +3,26 @@ let myBoolean = true;
 // preloader script............
 var audio = document.getElementById("audioPlayer");
 var loader = document.getElementById("preloader");
+var svgPath = document.querySelector("#setting-btn svg path");
 window.addEventListener("load", function () {
   loader.style.display = "none";
   document.querySelector('.hey').classList.add('popup');
+  this.playpause();
 })
 
 function playpause() {
   if (myBoolean == false) {
     audio.pause();
     myBoolean=true;
+    svgPath.setAttribute("d", "M9 4a.5.5 0 0 0-.812-.39L5.825 5.5H3.5A.5.5 0 0 0 3 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 9 12zm3.025 4a4.5 4.5 0 0 1-1.318 3.182L10 10.475A3.5 3.5 0 0 0 11.025 8 3.5 3.5 0 0 0 10 5.525l.707-.707A4.5 4.5 0 0 1 12.025 8");
+
    }
 
  else{
      audio.play();
      myBoolean=false;
+     svgPath.setAttribute("d", "M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06m7.137 2.096a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0");
+
  }
   }
 
