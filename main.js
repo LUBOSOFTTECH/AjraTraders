@@ -5,6 +5,7 @@ var audio = document.getElementById("audioPlayer");
 var loader = document.getElementById("preloader");
 var svgPath = document.querySelector("#setting-btn svg path");
 window.addEventListener("DOMContentLoaded", function () {
+  myBoolean = true;
   loader.style.display = "none";
   document.querySelector('.hey').classList.add('popup');
   this.playpause();
