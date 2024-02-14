@@ -95,8 +95,12 @@
           <a href="#skills" aria-label="skills menu button">
             <li class="skills" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="500">Our_Services();</li>
           </a>
+          <a href="#methodallagy" aria-label="methodallagy menu button">
+            <li class="methodallagy" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="700"> Methodallagy();
+            </li>
+          </a>
           <a href="#projects" aria-label="projects menu button">
-            <li class="projects" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="700"> Latest_Projects();
+            <li class="projects" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="900"> Latest_Projects();
             </li>
           </a>
 
@@ -118,7 +122,9 @@
         <button id="hamburger-button" onclick="hamburgerMenu()" tabindex="0" aria-label="Menu Button">
           <span class="burger-bar" id="burger-bar1"></span>
           <span class="burger-bar" id="burger-bar2"></span>
-          <span class="burger-bar" id="burger-bar3"></span></button>
+          <span class="burger-bar" id="burger-bar3"></span>
+          
+        </button>
       </div>
     </div>
     <!-- hamburger -->
@@ -135,6 +141,10 @@
         <a href="#skills" tabindex="0" aria-label="skills menu button">
           <li id="skills-mobile-tab" class="mobile-navbar-tabs-li skills" onclick="hidemenubyli()">Our_Services();
           </li>
+        </a>
+        <a href="#methodallagy" tabindex="0" aria-label="methodallagy menu button">
+          <li id="Methodallagy-mobile-tab" class="mobile-navbar-tabs-li methodallagy" onclick="hidemenubyli()">
+            Methodallagy();</li>
         </a>
         <a href="#projects" tabindex="0" aria-label="projects menu button">
           <li id="projects-mobile-tab" class="mobile-navbar-tabs-li projects" onclick="hidemenubyli()">
@@ -218,7 +228,7 @@
 
           <div class="sign"><svg viewBox="2 2 11.5 11.5">
               <path
-                d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06m7.137 2.096a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0" />
+                d="M9 4a.5.5 0 0 0-.812-.39L5.825 5.5H3.5A.5.5 0 0 0 3 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 9 12zm3.025 4a4.5 4.5 0 0 1-1.318 3.182L10 10.475A3.5 3.5 0 0 0 11.025 8 3.5 3.5 0 0 0 10 5.525l.707-.707A4.5 4.5 0 0 1 12.025 8" />
             </svg></div>
         </button>
       
@@ -263,6 +273,8 @@
         </div>
       </div>
     </section>
+
+
     <!-- about section ends  -->
 
     <section class="skills-section-container" id="skills">
@@ -304,6 +316,27 @@
         </div>
       </div>
     </section>
+
+    <!-- our methodallagy -->
+
+
+    <section class="methodallagy-section-container" id="methodallagy" >
+      <div class="methodallagy-section">
+        <div class="getintouch-heading" data-aos="fade-up">
+          <article class="section-heading-article" tabindex="0" aria-label="methodallagy me heading">Methodallagy();</article>
+          <p class="sectionHeadingP"></p>
+        </div>
+    
+        <div class="service-heading-article" data-aos="fade-up">
+            We adhere to this devlopment methodology to deliver top-quality products and ensure customer satisfaction
+        </div>
+    
+        <div class="dp" data-aos="fade-up"><img src="src/webp/dev_cycle.png" alt="Vinod Jangid" tabindex="0"
+              aria-label="image of vinod">
+        </div>
+    
+    </section>
+
     <!--Latest Projects section ends -->
     <section class="projects-section-container" id="projects">
       <div class="projects-section-div">
@@ -312,7 +345,7 @@
             Latest_Projects();</article>
           <p class="sectionHeadingP"></p>
         </div>
-        <div class="project-boxes-div">
+      <div class="project-boxes-div">
 
           <a href="https://ajratraders.com/" target="_blank" data-aos="fade-up">
 
@@ -322,8 +355,7 @@
                 <img src="src/jpg/ajratradersIcon.png" alt="" class="faviconforProject">
                 <article class="ProjectHeading">Ajra Traders & Sulaiha Transport</article>
                 <p class="ProjectDescription">
-                  Transform your home with Ajra's exquisite home accessories – where style meets comfort.luxury with
-                  Sulaiha Vehicle Rental, your key to seamless and memorable journeys.
+                  <b>Wep Application -Portfolio</b> This static website serves as a portfolio, representing a range of products and rental cars offered by the company
                 </p>
                 <button class="cta">
                   <span>See the Live Site</span>
@@ -338,6 +370,24 @@
           </a>
         </div>
 
+    <!-- excel tuision -->
+    <div class="project-boxes-div">
+
+       <!-- Ajra Traders Webite -->
+        <div class="project-box project-box2" id="project-box2">
+          <div class="info-div">
+            <img src="src/jpg/excelogo.png" alt="" class="faviconforProject">
+            <article class="ProjectHeading">Excel Physics Academy</article>
+            <p class="ProjectDescription">
+              This is <b>Desktop Application</b> 
+              This tuition management system incorporates various features such as registering new students, a daily attendance module, a test module, a payment module, a billing module, an SMS module, and more to provide comprehensive functionality for effective management.
+            </p>
+            
+          </div>
+          <div class="image-div"><img src="src/jpg/exceltustion.jpg" alt=""></div>
+        </div>
+      
+    </div>
 
       </div>
     </section>
@@ -389,7 +439,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <article>Design & Built by Lubo Soft <i class="far fa-copyright"></i> 2024</article>
+        <article> <b>Address :</b>11/1895-1 West Street Panaikulam 623-522 <br> Ramanathapuram District</article>
       </div>
     </div>
 
