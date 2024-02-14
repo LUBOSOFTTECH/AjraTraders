@@ -874,6 +874,7 @@ noscript {
     background: linear-gradient(82.3deg,
             rgba(150, 93, 233, 1) 10.8%,
             rgba(99, 88, 238, 1) 94.3%);
+
 }
 .setting-btn {
     position: fixed;
@@ -1542,7 +1543,25 @@ noscript {
     justify-content: center;
 
 }
+.message-heading {
+    margin-bottom: 100px;
+    width: 100%;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+}
+.message-heading article {
+    font-size: 2.6rem;
+    background: -webkit-linear-gradient(135deg, var(--color-light-blue), var(--color-light-purple), var(--color-light-blue), var(--color-light-purple));
+    background: linear-gradient(-45deg, var(--color-light-blue), var(--color-light-purple), var(--color-light-blue), var(--color-light-purple));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-family: fira code;
+}
 .getintouch-heading article {
     font-size: 2.6rem;
     background: -webkit-linear-gradient(135deg, var(--color-light-blue), var(--color-light-purple), var(--color-light-blue), var(--color-light-purple));
@@ -2155,4 +2174,128 @@ noscript {
     }
 }
 
+
+
+
+/* For popup screen */
+
+#contactButton {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    }
+    
+    #contactPopupWrapper {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 50%;
+        background: rgba(8, 8, 8, 0.7); /* Semi-transparent white background */
+        backdrop-filter: blur(5px); /* Blurred background */
+        z-index: 999;    
+        border-radius: 20px;}
+    
+  
+        
+          
+         
+        .input {
+            
+            border: 3px solid rgba(35, 29, 113, 0.781);
+            border-radius: 20px;
+            background-image: linear-gradient(120deg,#141414,#0e0e0f);
+            color: rgb(246, 246, 248);
+            cursor: pointer;
+            padding: 7px 12px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            transition: all 1s;
+            width: 90%;
+           }
+           
+           .input:focus {
+            outline-color: rgb(255, 254, 255);
+           }
+           .input-group {
+            margin-bottom: 20%; /* Adjust the spacing between input groups */
+            text-align: center;
+          }
+
+    .sendBtn {
+        --glow-color: rgb(196, 196, 196);
+        --glow-spread-color: rgba(101, 92, 231, 0.781);
+        --enhanced-glow-color: rgb(254, 254, 254);
+        --btn-color: rgb(76, 76, 133);
+        border: .25em solid var(--glow-color);
+        padding: 1em 3em;
+        color: var(--glow-color);
+        font-size: 15px;
+        font-weight: bold;
+        background-color: var(--btn-color);
+        border-radius: 1em;
+        outline: none;
+        box-shadow: 0 0 1em .25em var(--glow-color),
+               0 0 4em 1em var(--glow-spread-color),
+               inset 0 0 .75em .25em var(--glow-color);
+        text-shadow: 0 0 .5em var(--glow-color);
+        position: relative;
+        transition: all 0.3s;
+       }
+       
+       .sendBtn::after {
+        pointer-events: none;
+        content: "";
+        position: absolute;
+        top: 120%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: var(--glow-spread-color);
+        filter: blur(2em);
+        opacity: .7;
+        transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+       }
+       
+       .sendBtn:hover {
+        color: var(--btn-color);
+        background-color: var(--glow-color);
+        box-shadow: 0 0 1em .25em var(--glow-color),
+               0 0 4em 2em var(--glow-spread-color),
+               inset 0 0 .75em .25em var(--glow-color);
+       }
+       
+       .sendBtn:active {
+        box-shadow: 0 0 0.6em .25em var(--glow-color),
+               0 0 2.5em 2em var(--glow-spread-color),
+               inset 0 0 .5em .25em var(--glow-color);
+       }
+    .components {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%; /* Adjust the width as needed */
+        text-align: center;
+      }
+
+      .cancelBtn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #000000;
+        color: #acabab;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 10px;
+        border-color: #ffffff;
+        cursor: pointer;
+      }
+      .space {
+        height: 20px; /* Adjust the height for the desired space */
+      }
 /* responsive code above */

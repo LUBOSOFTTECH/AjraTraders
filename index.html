@@ -442,10 +442,35 @@
         <article> <b>Address :</b>11/1895-1 West Street Panaikulam 623-522 <br> Ramanathapuram District</article>
       </div>
     </div>
+<div class="space">
 
+</div>
   </footer>
   <!-- footer ends here -->
+<!-- Contact Popup Wrapper -->
+<div id="contactPopupWrapper">
+  <button class="cancelBtn" onclick="hideContactPopup()">Cancel</button>
+  <!-- Contact Popup -->
+  <div class="components">
+    <div class="input-group">
+    <input type="text" name="text" class="input" placeholder="Your Name">
+  </div>
 
+    <div class="input-group">
+    <input type="text" name="text" class="input" placeholder="Phone No">
+  </div>
+    
+
+  
+    <button class="sendBtn" onclick="sendMessage()">
+     Send a Message</button>
+  
+
+ </div>
+     
+
+  
+</div>
 </body>
 
 <script src="main.js"></script>
@@ -455,11 +480,7 @@
   AOS.init();
 </script>
 
-<script>
-  function Contact() {
-    window.location.href = "mailto:lubosoftenquiry@gmail.com";
-  }
-</script>
+
 
 
 <script>
@@ -487,6 +508,7 @@
 
 
   })
+  
 </script>
 
 </html>

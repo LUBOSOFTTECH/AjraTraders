@@ -161,7 +161,28 @@ const windowResize = (event) => {
     mouseYEndPoint = window.innerHeight;
     mouseXRange = mouseXEndPoint - mouseXStartPoint;
 }
+function Contact() {
+  // window.location.href = "mailto:lubosoftenquiry@gmail.com";
+  document.getElementById("contactPopupWrapper").style.display = "block";
+}
+function sendMessage() {
+  // Get values from input fields
+  document.getElementById("contactPopupWrapper").style.display = "none";
+  var customerName = document.getElementById("customerName").value;
+  var phoneNumber = document.getElementById("phoneNumber").value;
+  
+  // You can add code here to send the data to Google Sheets (using AJAX, for example)
+  console.log("Data to be sent to Google Sheets:");
+  console.log("Customer Name: " + customerName);
+  console.log("Phone Number: " + phoneNumber);
 
+  }
+  
+function hideContactPopup()
+{
+  document.getElementById("contactPopupWrapper").style.display = "none";
+}
+  
 
 window.addEventListener('mousemove', mouseMove);
 window.addEventListener('resize', windowResize);
