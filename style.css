@@ -2084,7 +2084,8 @@ noscript {
     .skills-section,
     .about-section,
     .methodallagy-section,
-    .projects-section-div {
+    .projects-section-div,
+    .about-section {
         width: 80%;
     }
 
