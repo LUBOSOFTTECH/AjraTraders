@@ -916,7 +916,12 @@ noscript {
 .sign svg path {
     fill: white;
 }
-
+.voice {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    
+  }
 /* text */
 .text {
     position: absolute;
