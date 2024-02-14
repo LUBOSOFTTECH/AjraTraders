@@ -466,27 +466,27 @@
   const cursor = document.querySelector(".cursor");
   const links = document.querySelectorAll("a,label,button");
 
-  window.addEventListener("mousemove", (e) => {
+  // window.addEventListener("mousemove", (e) => {
 
-    let x = e.pageX;
-    let y = e.pageY;
-
-
-    cursor.style.left = `${x}px`;
-    cursor.style.top = `${y}px`;
-
-    links.forEach(link => {
-      link.addEventListener("mouseenter", () => {
-        cursor.classList.add("hover");
-      })
-      link.addEventListener("mouseleave", () => {
-        cursor.classList.remove("hover");
-      })
-    })
+  //   let x = e.pageX;
+  //   let y = e.pageY;
 
 
+  //   cursor.style.left = `${x}px`;
+  //   cursor.style.top = `${y}px`;
 
-  })
+  //   links.forEach(link => {
+  //     link.addEventListener("mouseenter", () => {
+  //       cursor.classList.add("hover");
+  //     })
+  //     link.addEventListener("mouseleave", () => {
+  //       cursor.classList.remove("hover");
+  //     })
+  //   })
+
+
+
+  // })
 </script>
 
 </html>
