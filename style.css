@@ -528,14 +528,7 @@ noscript {
     height: fit-content;
 
 }
-@keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+
 .landing-page-container {
     background-size: contain;
     background-position: center;
@@ -546,7 +539,7 @@ noscript {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    animation: fadeIn 1s ease-out;
+
 }
 
 .text-content {
@@ -2084,8 +2077,7 @@ noscript {
     .skills-section,
     .about-section,
     .methodallagy-section,
-    .projects-section-div,
-    .about-section {
+    .projects-section-div {
         width: 80%;
     }
 
