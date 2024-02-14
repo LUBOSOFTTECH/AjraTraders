@@ -13,12 +13,6 @@ window.addEventListener("load", function () {
   
 })
 
-window.addEventListener("click", function () {
-  if(first_time_music==true)
-  {
-  // this.playpause();
-  }
-})
 function playpause() {
   if (myBoolean == false) {
     audio.pause();
@@ -31,7 +25,7 @@ function playpause() {
      audio.play();
      myBoolean=false;
      svgPath.setAttribute("d", "M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06m7.137 2.096a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0");
-     first_time_music=false;;
+     first_time_music=false;
  }
   }
 
@@ -170,7 +164,34 @@ const windowResize = (event) => {
     mouseYEndPoint = window.innerHeight;
     mouseXRange = mouseXEndPoint - mouseXStartPoint;
 }
+function handleIntersection(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Call your method or function here
+      yourMethod();
+      // Optionally, disconnect the observer if you only want to trigger once
+      observer.disconnect();
+    }
+  });
+}
 
+// Create an Intersection Observer
+const aboutSectionObserver = new IntersectionObserver(handleIntersection, {
+  threshold: 0.5, // Adjust the threshold as needed (0.5 means at least 50% of the element is in view)
+});
+
+// Target the about section by its ID
+const aboutSection = document.getElementById('about');
+
+// Start observing the about section
+aboutSectionObserver.observe(aboutSection);
+
+function yourMethod() {
+  if(first_time_music==true)
+  {
+  this.playpause();
+  }
+}
 
 window.addEventListener('mousemove', mouseMove);
 window.addEventListener('resize', windowResize);
