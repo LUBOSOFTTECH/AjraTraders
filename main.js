@@ -174,20 +174,23 @@ function sendMessage() {
   
   var phoneNumberElements = document.getElementsByName("phone");
   var phoneNumber = phoneNumberElements.length > 0 ? phoneNumberElements[0].value : "";
-  var phoneNumberLength = phoneNumber.length;
+  var phoneNumberLength = phoneNumber.lenvgth;
+
+  var MessageElements = document.getElementsByName("Message");
+  var Message = MessageElements.length > 0 ? MessageElements[0].value : "";
+  var MessageLength = Message.length;
   
   if (customerNameLength === 0) {
       alert('Please Enter the Name');
   } else if (phoneNumberLength === 0) {
       alert('Please Enter the Phone no');
-  } else {
-    sendDataToGoogleSheet(customerName, phoneNumber);
+  }else if (MessageLength === 0) {
+    alert('Please Enter the Message');
+} else {
+    sendDataToGoogleSheet(customerName, phoneNumber,Message);
       document.getElementById("contactPopupWrapper").style.display = "none";
   }
-  // You can add code here to send the data to Google Sheets (using AJAX, for example)
-  console.log("Data to be sent to Google Sheets:");
-  console.log("Customer Name: " + customerName);
-  console.log("Phone Number: " + phoneNumber);
+
 
   }
   
@@ -195,8 +198,8 @@ function hideContactPopup()
 {
   document.getElementById("contactPopupWrapper").style.display = "none";
 }
-function sendDataToGoogleSheet(name, contact) {
-  const url = 'https://script.google.com/macros/s/AKfycbwfSAINOBAIGA_0q7TgAszA24qHPbEqEkwWdisYEnXAMHpQoyIZ9MJn90ufGcd0GvoxCw/exec'; // Replace with your Google Apps Script URL
+function sendDataToGoogleSheet(name, contact,Message) {
+  const url = 'https://script.google.com/macros/s/AKfycbyJptBx3G7AwHaL5Ktop4AJQaQzVp_6HAo-GfnkzZ-55jlly6023mrJJL4ICfuZ8NQhHQ/exec'; // Replace with your Google Apps Script URL
 
   fetch(url, {
       method: 'POST',
@@ -206,7 +209,8 @@ function sendDataToGoogleSheet(name, contact) {
       },
       body: JSON.stringify({
         CLINT_NAME: name,
-        CONTACT: contact
+        CONTACT: contact,
+        MESSAGE:Message
       })
   })
   .then(response => console.log('Data sent to Google Sheets'))
