@@ -791,14 +791,6 @@ noscript {
     line-height: 20px;
 }
 
-.contact-btn-div {
-    width: 100%;
-    padding-top: 50px;
-    height: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
 
 .letsTalkBtn {
     position: relative;
@@ -1627,12 +1619,27 @@ noscript {
     text-align: center;
 }
 
+.popfooter-bottom article {
+    color: rgb(176, 176, 176);
+    font-size: 1.5rem;
+    font-family: fira code;
+}
+.popfooter-bottom {
+    top: 20px;
+    position:relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    text-align: center;
+}
+
 .footer-bottom article {
     color: rgb(176, 176, 176);
     font-size: 1.5rem;
     font-family: fira code;
 }
-
 .fa-copyright {
     font-size: 1.5rem;
     color: rgb(176, 176, 176);
@@ -1979,6 +1986,7 @@ noscript {
     }
 
     .contact-btn-div {
+        position: relative;
         height: 50px;
         display: flex;
         flex-direction: column-reverse;
@@ -2195,7 +2203,7 @@ noscript {
         left: 50%;
         transform: translate(-50%, -50%);
         width: 80%;
-        height: 400px;
+        height: 450px;
         background: rgba(8, 8, 8, 0.7); /* Semi-transparent white background */
         backdrop-filter: blur(5px); /* Blurred background */
         z-index: 999;    
@@ -2267,7 +2275,7 @@ noscript {
         color: var(--enhanced-glow-color);
         font-size: 15px;
         font-weight: bold;
-        background-color: transparent;
+        background-color:  rgba(0, 0, 0, 0.418);
         border-radius: 1em;
         outline: none;
         box-shadow: 0 0 1em .25em var(--glow-color),
@@ -2341,6 +2349,6 @@ noscript {
     }
 
     .input-group {
-        margin-bottom: 10%; 
-    }
+            margin-bottom: 10%; 
+        }
 /* responsive code above */

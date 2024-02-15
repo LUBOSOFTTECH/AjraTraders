@@ -204,11 +204,12 @@
         </p>
         <div class="contact-btn-div" data-aos="fade-up" data-aos-delay="800">
 
-          <a href="mailto:lubosoftenquiry@gmail.com" tabindex="-1">
-            <button class="letsTalkBtn">
+          <!-- <a href="mailto:lubosoftenquiry@gmail.com" tabindex="-1"> -->
+            <button class="letsTalkBtn" onclick="Contact()">
               <p class="letsTalkBtn-text">Contect Us!</p>
               <span class="letsTalkBtn-BG"></span>
-            </button></a>
+            </button>
+          <!-- </a> -->
         </div><!-- contact-btn-div -->
 
       </div>
@@ -449,16 +450,17 @@
   <!-- footer ends here -->
 <!-- Contact Popup Wrapper -->
 <div id="contactPopupWrapper">
+ 
   <button class="cancelBtn" onclick="hideContactPopup()">Cancel</button>
   <!-- Contact Popup -->
   <div class="components">
 
     <div class="input-group">
     <input type="text" name="name" class="input" placeholder="Your Name">
-  </div>
+     </div>
 
     <div class="input-group">
-    <input type="text" name="phone" class="input" placeholder="Phone No">
+    <input type="text" name="phone" class="input" placeholder="Phone No / Email">
     </div> 
     <div class="input-group">
     <input type="text" name="Message" class="inputMSG" placeholder="Message">
@@ -467,10 +469,13 @@
   
     <button class="sendBtn" onclick="sendMessage()">
      Send a Message</button>
-  
 
+
+     <div class="popfooter-bottom">
+      <article>"If you send a message, our team will call you back promptly."</article>
+    </div>
  </div>
-     
+  
 
   
 </div>
