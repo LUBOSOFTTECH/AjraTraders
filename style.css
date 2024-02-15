@@ -2188,17 +2188,25 @@ noscript {
     }
     
     #contactPopupWrapper {
+        --glow-color: rgb(28, 28, 76);
         display: none;
         position: fixed;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 80%;
-        height: 50%;
+        height: 400px;
         background: rgba(8, 8, 8, 0.7); /* Semi-transparent white background */
         backdrop-filter: blur(5px); /* Blurred background */
         z-index: 999;    
-        border-radius: 20px;}
+        border-radius: 20px;
+        border-radius: 1em;
+        outline: none;
+        box-shadow: 0 0 1em .25em var(--glow-color),
+               inset 0 0 .75em .25em var(--glow-color);
+               padding: 20px;
+     
+    }
     
   
         
@@ -2222,25 +2230,25 @@ noscript {
             outline-color: rgb(255, 254, 255);
            }
            .input-group {
-            margin-bottom: 20%; /* Adjust the spacing between input groups */
+            position: relative;
+            margin-bottom: 20%; 
             text-align: center;
           }
 
     .sendBtn {
-        --glow-color: rgb(196, 196, 196);
-        --glow-spread-color: rgba(101, 92, 231, 0.781);
-        --enhanced-glow-color: rgb(254, 254, 254);
-        --btn-color: rgb(76, 76, 133);
+        --glow-color: rgb(138, 138, 255);
+        --glow-spread-color: rgba(30, 30, 112, 0.781);
+        --enhanced-glow-color: rgb(255, 255, 255);
+        --btn-color: rgb(0, 0, 0);
         border: .25em solid var(--glow-color);
         padding: 1em 3em;
-        color: var(--glow-color);
+        color: var(--enhanced-glow-color);
         font-size: 15px;
         font-weight: bold;
-        background-color: var(--btn-color);
+        background-color: transparent;
         border-radius: 1em;
         outline: none;
         box-shadow: 0 0 1em .25em var(--glow-color),
-               0 0 4em 1em var(--glow-spread-color),
                inset 0 0 .75em .25em var(--glow-color);
         text-shadow: 0 0 .5em var(--glow-color);
         position: relative;
@@ -2256,8 +2264,8 @@ noscript {
         height: 100%;
         width: 100%;
         background-color: var(--glow-spread-color);
-        filter: blur(2em);
-        opacity: .7;
+        filter: blur(50em);
+        opacity: .1;
         transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
        }
        
@@ -2287,7 +2295,7 @@ noscript {
         position: absolute;
         top: 10px;
         right: 10px;
-        background-color: #000000;
+        background-color:transparent;
         color: #acabab;
         border: none;
         padding: 8px 12px;
@@ -2298,4 +2306,15 @@ noscript {
       .space {
         height: 20px; /* Adjust the height for the desired space */
       }
+
+    
+      @media only screen and (min-width: 768px) {
+        #contactPopupWrapper {
+            width: 50%;
+        }
+    
+        .input-group {
+            margin-bottom: 10%; /* Adjust margin for larger screens */
+        }
+    }
 /* responsive code above */

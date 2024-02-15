@@ -167,10 +167,23 @@ function Contact() {
 }
 function sendMessage() {
   // Get values from input fields
-  document.getElementById("contactPopupWrapper").style.display = "none";
-  var customerName = document.getElementById("customerName").value;
-  var phoneNumber = document.getElementById("phoneNumber").value;
+ 
+  var customerNameElements = document.getElementsByName("name");
+  var customerName = customerNameElements.length > 0 ? customerNameElements[0].value : "";
+  var customerNameLength = customerName.length;
   
+  var phoneNumberElements = document.getElementsByName("phone");
+  var phoneNumber = phoneNumberElements.length > 0 ? phoneNumberElements[0].value : "";
+  var phoneNumberLength = phoneNumber.length;
+  
+  if (customerNameLength === 0) {
+      alert('Please Enter the Name');
+  } else if (phoneNumberLength === 0) {
+      alert('Please Enter the Phone no');
+  } else {
+    sendDataToGoogleSheet(customerName, phoneNumber);
+      document.getElementById("contactPopupWrapper").style.display = "none";
+  }
   // You can add code here to send the data to Google Sheets (using AJAX, for example)
   console.log("Data to be sent to Google Sheets:");
   console.log("Customer Name: " + customerName);
@@ -182,7 +195,23 @@ function hideContactPopup()
 {
   document.getElementById("contactPopupWrapper").style.display = "none";
 }
-  
+function sendDataToGoogleSheet(name, contact) {
+  const url = 'https://script.google.com/macros/s/AKfycbwfSAINOBAIGA_0q7TgAszA24qHPbEqEkwWdisYEnXAMHpQoyIZ9MJn90ufGcd0GvoxCw/exec'; // Replace with your Google Apps Script URL
+
+  fetch(url, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        CLINT_NAME: name,
+        CONTACT: contact
+      })
+  })
+  .then(response => console.log('Data sent to Google Sheets'))
+  .catch(error => console.error('Error sending data to Google Sheets:', error));
+} 
 
 window.addEventListener('mousemove', mouseMove);
 window.addEventListener('resize', windowResize);
