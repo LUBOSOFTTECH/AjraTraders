@@ -915,6 +915,11 @@ noscript {
     top: 5px;
     
   }
+  .voice img{
+    position: relative;
+    right: 7px;
+    top: 7px;
+  }
 /* text */
 .text {
     position: absolute;
@@ -957,7 +962,7 @@ noscript {
 
 /* about section starts from here */
 .about-section-container {
-    margin-top: -40px;
+    margin-top: -60px;
     width: 100%;
     height: fit-content;
     display: flex;
@@ -1044,6 +1049,8 @@ noscript {
     justify-content: center;
     position: relative;
     transition-duration: .5s;
+    
+    
 }
 
 .dp img {
@@ -1634,8 +1641,22 @@ noscript {
     height: 40px;
     text-align: center;
 }
-
-.footer-bottom article {
+.popfooter-bottom article {
+    color: rgb(176, 176, 176);
+    font-size: 1.5rem;
+    font-family: fira code;
+}
+.foundername-bottom {
+    top: 2px;
+    position:relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    text-align: center;
+}
+.foundername-bottom article {
     color: rgb(176, 176, 176);
     font-size: 1.5rem;
     font-family: fira code;
@@ -2351,4 +2372,56 @@ noscript {
     .input-group {
             margin-bottom: 10%; 
         }
+
+
 /* responsive code above */
+
+.wrapper {
+    --background-color: transparent;
+    --text-color: hsl(0, 0%, 100%);
+    display: grid;
+    place-content: center;
+    background-color: var(--background-color);
+    min-height: 5vh;
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(1.5rem, 1rem + 18vw, 5rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-color);
+    
+  }
+  
+  .wrapper > div {
+    grid-area: 1/1/-1/-1;
+  }
+  .top {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 58%);
+  }
+  .bottom {
+    clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
+    color: transparent;
+    background: -webkit-linear-gradient(177deg, rgb(242, 242, 242) 53%, var(--text-color) 65%);
+    background: linear-gradient(177deg, rgb(232, 231, 231) 53%, var(--text-color) 65%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    transform: translateX(-0.02em);
+  }
+  img {
+    /*  To contain the image to the confines of the div  */
+    max-width: 100%;
+  }
+  
+  .img-gradient {
+    width: 350px;
+    margin: auto;
+  }
+  
+  .img-gradient::after {
+    display: block;
+    position: relative;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, hsl(240, 22%, 9%) 100%);
+    margin-top: -150px;
+    height: 150px;
+    width: 100%;
+    content: '';
+  }

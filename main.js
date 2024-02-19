@@ -18,7 +18,7 @@ function playpause() {
   if(myBoolean)
   {
     audio.play();
-    setTimeout(stop, 21100);
+    setTimeout(stop, 21200);
     myBoolean = false;
   
   }
@@ -162,8 +162,12 @@ const windowResize = (event) => {
     mouseXRange = mouseXEndPoint - mouseXStartPoint;
 }
 function Contact() {
+  this.playpause();
   // window.location.href = "mailto:lubosoftenquiry@gmail.com";
   document.getElementById("contactPopupWrapper").style.display = "block";
+}
+function EmailContact() {
+window.location.href = "mailto:lubosoftenquiry@gmail.com";
 }
 function sendMessage() {
   // Get values from input fields
