@@ -436,7 +436,28 @@ noscript {
     }
 
 }
+@keyframes rotation {
+    0% {
+        transform: rotate(-20deg);
+    }
 
+    25% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(20deg);
+    }
+
+    75% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-20deg);
+    }
+
+}
 .logo-top img {
     height: 100%;
     z-index: 2;
@@ -1126,6 +1147,7 @@ noscript {
     display: flex;
     align-items: center;
     gap: 10px;
+    
 }
 
 .methodallagy-heading-article {
@@ -1230,7 +1252,7 @@ noscript {
     flex-wrap: wrap;
     gap: 50px;
     margin-top: 50px;
-
+    
 }
 
 .tech-stack-box {
@@ -1625,7 +1647,11 @@ noscript {
     height: 80px;
     text-align: center;
 }
-
+.footer-bottom article {
+    color: rgb(176, 176, 176);
+    font-size: 1.5rem;
+    font-family: fira code;
+}
 .popfooter-bottom article {
     color: rgb(176, 176, 176);
     font-size: 1.5rem;
@@ -1860,8 +1886,7 @@ noscript {
         /* display: none; */
         display: flex;
         transform: translate(1000px);
-        transition-duration: 1s;
-
+        transition-duration: 1s; 
     }
 
     .show-toggle-menu {
@@ -1940,6 +1965,7 @@ noscript {
         display: flex;
         align-items: center;
         justify-content: center;
+        animation: rotation 20s linear infinite;
     }
 
     .activeThismobiletab {
@@ -2414,6 +2440,7 @@ noscript {
   .img-gradient {
     width: 350px;
     margin: auto;
+ 
   }
   
   .img-gradient::after {
